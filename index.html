@@ -106,9 +106,9 @@
             ctx.fillText(`Correct: ${correctExerciseCount}`, 20, 50);
 
             // Display angles
-            ctx.fillStyle = 'white';
-            ctx.fillText(`Left Shoulder Angle: ${Math.round(leftShoulderAngle)}`, leftShoulder.position.x, leftShoulder.position.y);
-            ctx.fillText(`Right Shoulder Angle: ${Math.round(rightShoulderAngle)}`, rightShoulder.position.x, rightShoulder.position.y);
+            //ctx.fillStyle = 'white';
+            //ctx.fillText(`Left Shoulder Angle: ${Math.round(leftShoulderAngle)}`, leftShoulder.position.x, leftShoulder.position.y);
+            //ctx.fillText(`Right Shoulder Angle: ${Math.round(rightShoulderAngle)}`, rightShoulder.position.x, rightShoulder.position.y);
 
             requestAnimationFrame(detectPose);
         }
@@ -121,8 +121,8 @@
             pose.keypoints.forEach(point => {
                 if (point.score > 0.5) {
                     ctx.beginPath();
-                    ctx.arc(point.position.x, point.position.y, 5, 0, 2 * Math.PI);
-                    ctx.fillStyle = 'white';
+                    //ctx.arc(point.position.x, point.position.y, 5, 0, 2 * Math.PI);
+                    //ctx.fillStyle = 'white';
                     ctx.fill();
                 }
             });
